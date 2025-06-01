@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 20% 98%; /* #F8FAFC */
+  --foreground: 220 20% 25%; /* #374151 */
+  --muted: 210 20% 96%; /* #F1F5F9 */
+  --muted-foreground: 215 15% 50%; /* #64748B */
+  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover-foreground: 220 20% 25%; /* #374151 */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 220 20% 25%; /* #374151 */
+  --border: 214 20% 92%; /* #E2E8F0 */
+  --input: 214 20% 92%; /* #E2E8F0 */
+  --primary: 195 100% 65%; /* #3B82F6 - professional blue */
+  --primary-foreground: 0 0% 100%; /* #FFFFFF */
+  --secondary: 270 40% 55%; /* #7C3AED - professional purple */
+  --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+  --accent: 210 30% 97%; /* #F8FAFC - subtle accent */
+  --accent-foreground: 220 20% 25%; /* #374151 */
+  --destructive: 0 84% 60%; /* #F56565 */
+  --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+  --ring: 195 100% 65%; /* #3B82F6 */
+  --radius: 0.5rem;
+  
+  /* Custom BlueMail colors - refined */
+  --baby-blue: 195 100% 65%; /* #3B82F6 */
+  --soft-purple: 270 40% 55%; /* #7C3AED */
+  --light-blue: 210 30% 97%; /* #F8FAFC */
+  --soft-blue: 210 50% 94%; /* #E0F2FE */
+  --elegant-gray: 220 15% 95%; /* #F1F5F9 */
+  
+  /* New attractive colors */
+  --golden-amber: 43 96% 56%; /* #F59E0B */
+  --golden-light: 48 100% 96%; /* #FFFBEB */
+  --pink-rose: 330 81% 60%; /* #EC4899 */
+  --pink-light: 327 73% 97%; /* #FDF2F8 */
+}
+
+.dark {
+  --background: 224 71% 4%; /* #0F172A */
+  --foreground: 213 31% 91%; /* #E2E8F0 */
+  --muted: 223 47% 11%; /* #1E293B */
+  --muted-foreground: 215 20% 65%; /* #94A3B8 */
+  --popover: 224 71% 4%; /* #0F172A */
+  --popover-foreground: 213 31% 91%; /* #E2E8F0 */
+  --card: 224 71% 4%; /* #0F172A */
+  --card-foreground: 213 31% 91%; /* #E2E8F0 */
+  --border: 216 34% 17%; /* #334155 */
+  --input: 216 34% 17%; /* #334155 */
+  --primary: 195 100% 73%; /* #87CEEB */
+  --primary-foreground: 0 0% 100%; /* #FFFFFF */
+  --secondary: 270 50% 65%; /* #9370DB */
+  --secondary-foreground: 0 0% 100%; /* #FFFFFF */
+  --accent: 216 34% 17%; /* #334155 */
+  --accent-foreground: 213 31% 91%; /* #E2E8F0 */
+  --destructive: 0 63% 31%; /* #B91C1C */
+  --destructive-foreground: 213 31% 91%; /* #E2E8F0 */
+  --ring: 195 100% 73%; /* #87CEEB */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background: linear-gradient(135deg, 
+      hsl(var(--light-blue)) 0%, 
+      hsl(var(--elegant-gray)) 25%, 
+      hsl(var(--soft-blue)) 50%, 
+      hsl(var(--pink-light)) 75%, 
+      hsl(var(--golden-light)) 100%
+    );
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    @apply antialiased text-foreground;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    @apply bg-gradient-to-r from-[hsl(var(--baby-blue))] to-[hsl(var(--soft-purple))];
+  }
+  
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-sm border border-white/50;
+  }
+  
+  .input-focus {
+    @apply focus:ring-2 focus:ring-[hsl(var(--baby-blue))]/50 focus:border-[hsl(var(--baby-blue))] transition-colors;
+  }
+}

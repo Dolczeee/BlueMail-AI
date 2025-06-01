@@ -1,0 +1,47 @@
+Stwórz aplikację webową React po polsku o nazwie BlueMail AI — inteligentne narzędzie do generowania i edycji maili marketingowych z wykorzystaniem AI.
+Opis aplikacji (do wyświetlenia):
+BlueMail AI to inteligentne narzędzie do generowania i edycji maili marketingowych, wykorzystujące sztuczną inteligencję. Dzięki prostemu formularzowi i zaawansowanym algorytmom AI, szybko stworzysz profesjonalne wiadomości dopasowane do Twojej grupy odbiorców. Aplikacja wspiera efektywną komunikację i pomaga zwiększyć skuteczność kampanii e-mail marketingowych.
+Informacje o twórcy:
+•	Twórca: Julia Bloch
+•	Email: bl.julia99@gmail.com
+•	Tel: 796 961 363
+•	Wykonano za pomocą ChatGPT (wersja GPT-4), Replit
+•	Na potrzeby rekrutacji AI Marketing Junior / Specialist
+•	GRYF Spółka z o.o.
+•	SINDBAD Spółka z o.o.
+Aplikacja będzie umieszczona na stronie: https://rekru.cmenergy.pl
+Funkcjonalności:
+1.	Formularz z następującymi polami i bardzo szczegółowymi propozycjami (możesz je rozszerzyć):
+•	Rodzaj e-maila (dropdown): Newsletter, Oferta specjalna, Zaproszenie na wydarzenie, Podziękowanie, Przypomnienie, Informacja o produkcie, Aktualizacja statusu, Ankieta, Inne
+•	Cel wiadomości (dropdown): Zwiększenie sprzedaży, Budowanie relacji, Pozyskanie leadów, Informowanie o promocjach, Zapraszanie na wydarzenia, Edukacja klientów, Feedback od klientów
+•	Grupa docelowa (dropdown) z rozszerzonymi opcjami: Nowi klienci, Stali klienci, Klienci B2B, Klienci B2C, Subskrybenci newslettera, Partnerzy biznesowi, Pracownicy, Młodzi profesjonaliści, Właściciele małych i średnich firm, Studenci i młodzież, Rodzice z dziećmi, Seniorzy, Entuzjaści technologii, Miłośnicy mody i stylu, Osoby aktywne fizycznie, Osoby kreatywne
+•	Ton komunikacji (dropdown): Formalny, Przyjazny, Motywujący, Entuzjastyczny, Neutralny, Humorystyczny
+•	Branża i rodzaj biznesu (pole tekstowe)
+•	Propozycja wartości (UVP) (pole tekstowe)
+•	Wezwanie do działania (CTA) (pole tekstowe)
+•	Nazwa firmy (opcjonalnie)
+2.	Po wysłaniu formularza aplikacja wywołuje API Huggingface Mistral-7B-Instruct-v0.3:
+•	Endpoint: https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3
+•	Klucz API powinien być w kodzie w zmiennej const API_KEY = "TU_WSTAW_SWÓJ_KLUCZ_API";
+•	Obsługa ładowania (spinner) i błędów podczas wywołania API
+3.	Aplikacja generuje i wyświetla:
+•	Główny temat e-maila
+•	Alternatywne tematy
+•	Wygenerowaną treść e-maila (w dwóch widokach: tekstowym i HTML)
+4.	Możliwość eksportu wygenerowanego maila do pliku HTML
+UI/UX i wygląd:
+•	Responsywny, przejrzysty i intuicyjny layout: formularz i wyniki wyraźnie rozdzielone, dobrze rozmieszczone panele
+•	Kolorystyka: baby blue z miękkimi gradientami od jasnego błękitu do fioletu
+•	Nowoczesne, minimalistyczne fonty, duże czytelne przyciski
+•	Zaokrąglone rogi, delikatne cienie (bez efektów hover powodujących przesuwanie elementów lub zwiększanie cienia)
+•	Animacje hover zastąp delikatnym podświetleniem bez przesunięć
+•	Duże odstępy i marginesy dla lepszej czytelności
+•	Eleganckie ikony i nagłówki w sekcjach formularza i wyników
+Technologie:
+•	React.js
+•	fetch lub axios do wywołania API
+•	styled-components, Tailwind CSS lub Emotion (według uznania) do stylizacji
+Dodatkowo:
+•	Kod powinien być czytelny, dobrze skomentowany i zorganizowany
+•	Nie wymaga bazy danych (prosta aplikacja frontendowa)
+Proszę o kompletne rozwiązanie UI, logiki i integracji API zgodne z powyższymi wymaganiami.
